@@ -1,0 +1,242 @@
+.home-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.admin-link {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.admin-link:hover {
+    background-color: #5a6268;
+}
+
+.membership-info {
+    margin: 40px 0;
+}
+
+.membership-card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.membership-card p {
+    margin: 10px 0;
+}
+
+.actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.start-chat-btn {
+    background-color: #6c5ce7;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    flex: 1;
+    max-width: 200px;
+    min-width: 150px;
+}
+
+.start-chat-btn:hover:not(:disabled) {
+    background-color: #5642d9;
+}
+
+.start-chat-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.analysis-btn {
+    background-color: #fd79a8;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    flex: 1;
+    max-width: 200px;
+    min-width: 150px;
+}
+
+.analysis-btn:hover:not(:disabled) {
+    background-color: #e84393;
+}
+
+.analysis-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.purchase-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    flex: 1;
+    max-width: 200px;
+    min-width: 150px;
+}
+
+.purchase-btn:hover {
+    background-color: #218838;
+}
+
+.purchase-section {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.available-memberships {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.membership-option {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #dee2e6;
+}
+
+.membership-option h4 {
+    margin-top: 0;
+    color: #495057;
+}
+
+.membership-option p {
+    margin: 8px 0;
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.buy-btn {
+    background-color: #17a2b8;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.buy-btn:hover:not(:disabled) {
+    background-color: #138496;
+}
+
+.buy-btn:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+}
+
+.analysis-section {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    margin-top: 20px;
+    border: 1px solid #dee2e6;
+    overflow: hidden;
+}
+
+.analysis-header {
+    background-color: #fd79a8;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.analysis-header h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.close-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.analysis-content {
+    padding: 20px;
+    text-align: left;
+}
+
+.user-text {
+    background-color: #e8f4ff;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 10px 0;
+    font-style: italic;
+    border-left: 4px solid #6c5ce7;
+}
+
+.analysis-result {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 10px 0;
+    border: 1px solid #dee2e6;
+    line-height: 1.6;
+    white-space: pre-wrap;
+}
+
+.analysis-result div {
+    margin: 5px 0;
+}
