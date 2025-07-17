@@ -17,6 +17,15 @@ function ChatPage() {
     useEffect(() => {
         checkMembershipAccess();
         ChatSession.startSession();
+        
+        // 첫 방문 시 AI 인사 메시지 추가
+        if (messages.length === 0) {
+            const welcomeMessage = {
+                role: 'ai',
+                content: 'Hello! I\'m your AI English tutor. I\'m here to help you practice English conversation. Feel free to ask me anything or just start a casual conversation. How are you doing today?'
+            };
+            setMessages([welcomeMessage]);
+        }
     }, []);
 
     // 메시지가 변경될 때마다 세션에 저장
