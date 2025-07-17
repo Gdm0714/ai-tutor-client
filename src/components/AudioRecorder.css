@@ -1,0 +1,215 @@
+.audio-recorder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+}
+
+.record-btn {
+    padding: 20px 40px;
+    font-size: 18px;
+    border: none;
+    border-radius: 50px;
+    background-color: #ff6b6b;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.record-btn:hover:not(:disabled) {
+    transform: scale(1.05);
+}
+
+.record-btn.recording {
+    background-color: #4ecdc4;
+    animation: pulse 1.5s infinite;
+}
+
+.record-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.waveform {
+    display: flex;
+    align-items: end;
+    gap: 2px;
+    height: 50px;
+    padding: 5px;
+    background: #f0f0f0;
+    border-radius: 8px;
+    justify-content: center;
+    min-width: 120px;
+}
+
+.wave-bar {
+    width: 4px;
+    min-height: 5px;
+    background: linear-gradient(to top, #4ecdc4, #45b7b8);
+    border-radius: 2px;
+    transition: height 0.1s ease;
+    animation: wave-pulse 1.5s infinite ease-in-out;
+}
+
+.wave-bar:nth-child(2n) {
+    animation-delay: 0.1s;
+}
+
+.wave-bar:nth-child(3n) {
+    animation-delay: 0.2s;
+}
+
+@keyframes wave-pulse {
+    0%, 100% {
+        transform: scaleY(1);
+    }
+    50% {
+        transform: scaleY(1.2);
+    }
+}
+
+.recording-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    min-width: 300px;
+}
+
+.transcript-preview {
+    background: #f8f9fa;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+    min-height: 20px;
+    font-style: italic;
+    color: #495057;
+    max-width: 300px;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.transcript-preview:empty:before {
+    content: "음성을 인식하고 있습니다...";
+    color: #6c757d;
+}
+
+.debug-info {
+    background: #e9ecef;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #495057;
+    margin-bottom: 10px;
+    text-align: center;
+    border: 1px solid #ced4da;
+}
+
+.input-options {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-btn {
+    padding: 15px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 50px;
+    background-color: #17a2b8;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.text-btn:hover:not(:disabled) {
+    transform: scale(1.05);
+    background-color: #138496;
+}
+
+.text-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.text-input-section {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 15px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+}
+
+.text-input {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+.text-input:focus {
+    border-color: #4ecdc4;
+    box-shadow: 0 0 0 0.2rem rgba(78, 205, 196, 0.25);
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover:not(:disabled) {
+    background-color: #218838;
+}
+
+.submit-btn:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+}
+
+.complete-btn {
+    padding: 15px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 50px;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: bold;
+}
+
+.complete-btn:hover:not(:disabled) {
+    transform: scale(1.05);
+    background-color: #218838;
+}
+
+.complete-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
